@@ -1,0 +1,9 @@
+version: '3'
+services:
+  server:
+    image: jetbrains/teamcity-server
+    container_name: server
+    volumes:
+      - /etc/volumes/teamcity/server/data:/data/teamcity_server/datadir
+      - /etc/volumes/teamcity/server/logs:/opt/teamcity/logs
+    network_mode: host
